@@ -1,12 +1,9 @@
-.navbar-brand {
-    display: inline-block; /* Обеспечивает возможность задать размеры */
-    width: 200px; /* Задайте нужную ширину */
-    height: 50px; /* Задайте нужную высоту */
-    background-image: url('{% static "application/img/sports-tools.jpg" %}'); /* Путь к изображению */
-    background-size: cover; /* Масштабирует изображение до полного охвата элемента */
-    background-position: center; /* Центрирует изображение */
-    color: white; /* Цвет текста */
-    text-align: center; /* Центрирует текст */
-    line-height: 50px; /* Выравнивание текста по вертикали */
-    text-decoration: none; /* Убирает подчеркивание */
+.logo-text {
+    display: inline-block; /* Убедитесь, что элемент ведет себя как блок */
+    background-image: url("/static/application/img/barca.png");
+    background-size: cover; /* Убедитесь, что изображение покрывает весь элемент */
+    background-position: center; /* Центрируйте изображение */
+    padding: 10px 20px; /* Добавьте отступы, чтобы текст не прилипал к краям */
+    color: rgba(0, 102, 255, 0.94); /* Измените цвет текста, чтобы он хорошо смотрелся на фоне */
+    text-shadow: 1px 1px 2px #010d59; /* Добавьте тень для улучшения читаемости */
 }
