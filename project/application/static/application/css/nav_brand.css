@@ -1,0 +1,12 @@
+.navbar-brand {
+    display: inline-block; /* Обеспечивает возможность задать размеры */
+    width: 200px; /* Задайте нужную ширину */
+    height: 50px; /* Задайте нужную высоту */
+    background-image: url('{% static "application/img/sports-tools.jpg" %}'); /* Путь к изображению */
+    background-size: cover; /* Масштабирует изображение до полного охвата элемента */
+    background-position: center; /* Центрирует изображение */
+    color: white; /* Цвет текста */
+    text-align: center; /* Центрирует текст */
+    line-height: 50px; /* Выравнивание текста по вертикали */
+    text-decoration: none; /* Убирает подчеркивание */
+}

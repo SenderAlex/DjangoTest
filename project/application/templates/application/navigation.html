@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'application/css/nav_brand.css' %}">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{% url 'index' %}">Спорт от Шурика</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Переключатель навигации">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Главная</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Футбол
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="{% url 'laliga' %}">La Liga</a></li>
+            <li><a class="dropdown-item" href="{% url 'premiereleague' %}">Premier League</a></li>
+            <li><a class="dropdown-item" href="{% url 'seriea' %}">Serie A</a></li>
+            <li><a class="dropdown-item" href="{% url 'bundesliga' %}">Bundesliga</a></li>
+            <li><a class="dropdown-item" href="{% url 'liga1' %}">Liga 1</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Хоккей
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">КХЛ</a></li>
+            <li><a class="dropdown-item" href="#">НХЛ</a></li>
+            <li><a class="dropdown-item" href="#">Кубок Гагарина</a></li>
+            <li><a class="dropdown-item" href="#">Кубок Стэнли</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Баскетбол
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">НБА</a></li>
+            <li><a class="dropdown-item" href="#">Евролига</a></li>
+            <li><a class="dropdown-item" href="#">Единая лига ВТБ</a></li>
+            <li><a class="dropdown-item" href="#">НБА Плейофф</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Теннис
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Australian Open</a></li>
+            <li><a class="dropdown-item" href="#">Roland Garros</a></li>
+            <li><a class="dropdown-item" href="#">Wimbeldon</a></li>
+            <li><a class="dropdown-item" href="#">US Open</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Авто
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Формула-1</a></li>
+            <li><a class="dropdown-item" href="#">MotoGP</a></li>
+            <li><a class="dropdown-item" href="#">RDS</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск">
+        <button class="btn btn-outline-success" type="submit">Поиск</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+</body>
+</html>
