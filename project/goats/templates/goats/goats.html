@@ -1,10 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'application/layout.html' %}
 
-</body>
-</html>
+{% block title %}
+<h1>Список лучших бомбардиров Лиги Чемпионов за всю историю</h1>
+{% endblock %}
+
+{% block content %}
+<h2><center>Список лучших бомбардиров Лиги Чемпионов за всю историю</center></h2>
+<div class="table-responsive">
+    <table class="table table-striped table-bordered mx-auto" style="width: 80%;">
+        <thead>
+        <tr>
+            <th class="text-center">Имя</th>
+            <th class="text-center">Фамилия</th>
+            <th class="text-center">Количество забитых голов</th>
+            <th class="text-center">Клубы</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for goat in goats%}
+        <tr class="text-center">
+            <td>{{goat.first_name}}</td>
+            <td>{{goat.last_name}}</td>
+            <td>{{goat.scores}}</td>
+            <td>{{goat.clubs}}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

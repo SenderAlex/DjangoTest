@@ -1,5 +1,6 @@
 from django.shortcuts import render
-
+from .models import Goat
 
 def goats(request):
-    return render(request, "goats/goats.html")
+    goats = Goat.objects.all()
+    return render(request, "goats/goats.html", {"goats": goats})
